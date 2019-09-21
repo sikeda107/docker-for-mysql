@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>mydb</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>1535103227652610452</string>
+			<key>name</key>
+			<string>mydb</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {954, 625}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>DROP TABLE mytable;
+
+CREATE TABLE mytable(
+  id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主キー',
+  jp_name VARCHAR(255) COMMENT '和名',
+  en_name VARCHAR(255) COMMENT '英名',
+  hoby VARCHAR(255) COMMENT '趣味',
+  updated_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  created_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成時間',
+  deleted_time DATETIME COMMENT '削除時間',
+  version INT NOT NULL DEFAULT 0 COMMENT 'ロック用更新回数'
+)AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+BEGIN;
+ROLLBACK;
+-- COMMIT;
+
+SELECT *
+FROM mytable;
+
+INSERT INTO mytable
+(jp_name,en_name,hoby)
+VALUES
+('ほげ','hoge','foofoo'),
+('森嶋','Moishima','Running'),
+('天野','Amano','Cooking');
+
+UPDATE mytable 
+SET hoby = 'piyopiyo',
+version = version + 1
+WHERE id = 1;
+</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>-- COMMIT;
+
+SELECT *
+FROM mytable</string>
+		<string>UPDATE mytable 
+SET hoby = 'piyopiyo',
+version = version + 1
+WHERE id = 1</string>
+		<string>INSERT INTO mytable
+(jp_name,en_name,hoby)
+VALUES
+('ほげ','hoge','foofoo'),
+('森嶋','Moishima','Running'),
+('天野','Amano','Cooking')</string>
+		<string>CREATE TABLE mytable(
+  id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主キー',
+  jp_name VARCHAR(255) COMMENT '和名',
+  en_name VARCHAR(255) COMMENT '英名',
+  hoby VARCHAR(255) COMMENT '趣味',
+  updated_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  created_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成時間',
+  deleted_time DATETIME COMMENT '削除時間',
+  version INT NOT NULL DEFAULT 0 COMMENT 'ロック用更新回数'
+)AUTO_INCREMENT=1 DEFAULT CHARSET=utf8</string>
+		<string>DROP TABLE mytable</string>
+		<string>UPDATE mytable 
+SET hoby = 'piyopiyo',
+version = version + 1
+WHERE id = 3</string>
+		<string>ROLLBACK</string>
+		<string>BEGIN</string>
+		<string>UPDATE mytable 
+SET hoby = 'piyopiyo'
+WHERE id = 3</string>
+		<string>INSERT INTO mytable
+(jp_name,en_name,hoby)
+VALUES
+('森嶋','Moishima','Running'),
+('天野','Amano','Cooking')</string>
+		<string>SELECT @@GLOBAL.sql_mode</string>
+		<string>CREATE TABLE mytable(
+  id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主キー',
+  jp_name VARCHAR(255) COMMENT '和名',
+  en_name VARCHAR(255) COMMENT '英名',
+  hoby VARCHAR(255) COMMENT '趣味',
+  updated_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  created_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成時間',
+  deleted_time DATETIME NOT NULL DEFAULT '9999-99-99 99:99:99' COMMENT '削除時間',
+  version INT NOT NULL DEFAULT 0 COMMENT 'ロック用更新回数'
+)AUTO_INCREMENT=1 DEFAULT CHARSET=utf8</string>
+		<string>CREATE TABLE mytable(
+  id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主キー',
+  jp_name VARCHAR(255) COMMENT '和名',
+  en_name VARCHAR(255) COMMENT '英名',
+  hoby VARCHAR(255) COMMENT '趣味',
+  updated_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  created_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成時間',
+  deleted_time DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '削除時間',
+  version INT NOT NULL DEFAULT 0 COMMENT 'ロック用更新回数'
+)AUTO_INCREMENT=1 DEFAULT CHARSET=utf8</string>
+		<string>CREATE TABLE mytable(
+  id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主キー',
+  jp_name VARCHAR(255) COMMENT '和名',
+  en_name VARCHAR(255) COMMENT '英名',
+  hoby VARCHAR(255) COMMENT '趣味',
+  updated_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  created_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成時間',
+  deleted_time DATETIME NOT NULL DEFAULT 0 COMMENT '削除時間',
+  version INT NOT NULL DEFAULT 0 COMMENT 'ロック用更新回数'
+)AUTO_INCREMENT=1 DEFAULT CHARSET=utf8</string>
+		<string>-- COMMIT;
+DROP TABLE mytable</string>
+		<string>SELECT *
+FROM mytable</string>
+		<string>INSERT INTO mytable
+(jp_name,en_name,hoby),
+VALUES
+('森嶋','Moishima','Running'),
+('天野','Amano','Cooking')</string>
+		<string>INSERT INTO mytable
+(jp_name,en_name,hoby),
+VALUE
+('森嶋','Moishima','Running'),
+('天野','Amano','Cooking')</string>
+		<string>INSERT INTO mytable(jp_name,en_name,hoby),
+VALUE(
+'森嶋','Moishima','Running'
+'天野','Amano','Cooking'
+)</string>
+		<string>-- COMMIT;
+
+CREATE TABLE mytable(
+  id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主キー',
+  jp_name VARCHAR(255) COMMENT '和名',
+  en_name VARCHAR(255) COMMENT '英名',
+  hoby VARCHAR(255) COMMENT '趣味',
+  updated_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  created_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成時間',
+  deleted_time DATETIME NOT NULL COMMENT '削除時間',
+  version INT DEFAULT 0 COMMENT 'ロック用更新回数'
+)AUTO_INCREMENT=1 DEFAULT CHARSET=utf8</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.27</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
