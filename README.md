@@ -106,3 +106,20 @@ exit
 ### 3.3. その他
 
 - [127.0.0.1 と localhost と 0.0.0.0 の違い - Qiita](https://qiita.com/1ain2/items/194a9372798eaef6c5ab)
+
+# 修正 2020-06-14
+
+## volumes_from の廃止
+
+docker-compose version 3移行 のため、名前付きボリュームを利用したデータの永続化。
+
+```bash
+# ボリュームの確認
+> docker volume ls
+DRIVER              VOLUME NAME
+local               docker-for-mysql_dbdata
+# ボリュームの削除
+> docker volume rm docker-for-mysql_dbdata
+```
+
+公式: [Compose ファイル バージョン 3 リファレンス #volumes | Docker Documentation](https://matsuand.github.io/docs.docker.jp.onthefly/compose/compose-file/#volumes)
