@@ -123,3 +123,12 @@ local               docker-for-mysql_dbdata
 ```
 
 公式: [Compose ファイル バージョン 3 リファレンス #volumes | Docker Documentation](https://matsuand.github.io/docs.docker.jp.onthefly/compose/compose-file/#volumes)
+
+## 初期化処理の追加
+
+init 配下にdatabase, table, insertの初期化クエリを作成。ビルドに、コンテナにコピーして実行。
+
+### 参考
+* [DockerのMySQLコンテナに外部のサーバーから接続する - Qiita](https://qiita.com/Esfahan/items/70047ea2e4fecab4e2cc)
+* [Dockerのデータを永続化！Data Volume（データボリューム）の理解から始める環境構築入門 | Enjoy IT Life](https://nishinatoshiharu.com/docker-volume-tutorial/)
+* [Docker で MySQL 起動時にデータの初期化を行う - Qiita](https://qiita.com/moaikids/items/f7c0db2c98425094ef10)
